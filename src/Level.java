@@ -7,7 +7,7 @@ public class Level extends GameLevel {
     public void create() {
 
         GameObject wallpaper1 = new GameObject("Object1", 800, 600, "BlueWallpaper.png");
-        GameObject cookiebutton = new CookieButton();
+        CookieButton cookiebutton = new CookieButton();
         GameObject Shop_Icon = new Shop_Icon();
         Shop_Icon.setPosition(360, 250);
 

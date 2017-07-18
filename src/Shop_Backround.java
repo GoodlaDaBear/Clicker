@@ -15,7 +15,4 @@ public class Shop_Backround extends GameObject {
     public void update(float dt){
 
     }
-
-
-
 }
