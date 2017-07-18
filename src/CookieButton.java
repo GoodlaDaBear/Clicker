@@ -7,7 +7,7 @@ import java.awt.event.KeyEvent;
  * Created by ishaan.desai on 7/17/2017.
  */
 public class CookieButton extends GameObject {
-    int cookies = 0;
+    static int cookies = 0;
     int change = 1;
     SpriteText st;
 
@@ -19,6 +19,8 @@ public class CookieButton extends GameObject {
 
     @Override
     public void update(float dt) {
+        st.Change("Cookies: " + cookies);
+
         if (InputManager.getMousePosition().getX() < 460 && InputManager.getMousePosition().getX() > 315 && InputManager.getMousePosition().getY() < 315 && InputManager.getMousePosition().getY() > 265) {
             if (InputManager.isMouseButtonTriggered(0)) {
 

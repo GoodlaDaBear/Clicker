@@ -10,7 +10,8 @@ public class Level extends GameLevel {
         CookieButton cookiebutton = new CookieButton();
         GameObject Shop_Icon = new Shop_Icon();
         Shop_Icon.setPosition(360, 250);
-
+        GameObject box = new box();
+        box.setPosition(200,50);
     }
 
     @Override
