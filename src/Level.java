@@ -1,7 +1,5 @@
-import edu.digipen.InputManager;
 import edu.digipen.gameobject.GameObject;
 import edu.digipen.level.GameLevel;
-import edu.digipen.math.Vec2;
 
 public class Level extends GameLevel {
 
@@ -10,6 +8,8 @@ public class Level extends GameLevel {
 
         GameObject wallpaper1 = new GameObject("Object1", 800, 600, "BlueWallpaper.png");
         GameObject cookiebutton = new CookieButton();
+        GameObject Shop_Icon = new Shop_Icon();
+        Shop_Icon.setPosition(360, 250);
 
     }
 
