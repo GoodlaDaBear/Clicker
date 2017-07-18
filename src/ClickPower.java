@@ -15,11 +15,12 @@ public class ClickPower extends GameObject                                      
 
     @Override
     public void update(float dt){
-        if(InputManager.getMousePosition().getX() < 100 &&InputManager.getMousePosition().getX() > 50 &&InputManager.getMousePosition().getY() < 160&&InputManager.getMousePosition().getY() > 110) {
+        if(InputManager.getMousePosition().getX() < 105 &&InputManager.getMousePosition().getX() > 55 &&InputManager.getMousePosition().getY() < 160&&InputManager.getMousePosition().getY() > 110) {
             if(InputManager.isMouseButtonPressed(0) && debounce) {
                 debounce = false;
                 CookieButton cookieButton = (CookieButton) ObjectManager.getGameObjectByName("CookieButton");
                 cookieButton.change++;
+                System.out.println(cookieButton.change);
             }
             if(InputManager.isMouseButtonReleased(0))
             {
