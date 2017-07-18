@@ -24,6 +24,13 @@ public class Shop_Icon extends GameObject {
                 st = new SpriteText("Each Click Gives You", 15, SpriteText.Alignment.CENTER, 7, -315, 115);
                 st = new SpriteText("One More Cookie", 15, SpriteText.Alignment.CENTER, 7, -315, 95);
                 st = new SpriteText("Costs 5 Cookies", 15, SpriteText.Alignment.CENTER, 7, -315, 75);
+                GameObject AutoClick = new AutoClick();
+                AutoClick.setPosition(-170, 175);
+                st = new SpriteText("+1 Auto Clicker", 15, SpriteText.Alignment.CENTER, 7, -170, 135);
+                st = new SpriteText("Gives You One", 15, SpriteText.Alignment.CENTER, 7, -170, 115);
+                st = new SpriteText("Automatic Cookie", 15, SpriteText.Alignment.CENTER, 7, -170, 95);
+                st = new SpriteText("Every Second", 15, SpriteText.Alignment.CENTER, 7, -170, 75);
+                st = new SpriteText("Costs 10 Cookies", 15, SpriteText.Alignment.CENTER, 7, -170, 55);
 
             }
 
