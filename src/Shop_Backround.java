@@ -7,8 +7,8 @@ import edu.digipen.gameobject.GameObject;
 public class Shop_Backround extends GameObject {
 
 
-    public Shop_Backround(String name_, int width_, int height_, String textureName_) {
-        super(name_, width_, height_, textureName_);
+    public Shop_Backround() {
+        super("Shop_Backround", 5000, 5000, "Shop_Icon.png");
     }
 
     @Override
