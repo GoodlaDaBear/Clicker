@@ -26,12 +26,18 @@ public class Shop_Icon extends GameObject {
                 st = new SpriteText("Costs 5 Cookies", 15, SpriteText.Alignment.CENTER, 7, -315, 75);
                 GameObject AutoClick = new AutoClick();
                 AutoClick.setPosition(-170, 175);
-                st = new SpriteText("+1 Auto Clicker", 15, SpriteText.Alignment.CENTER, 7, -170, 135);
+                st = new SpriteText("+1 Auto Click", 15, SpriteText.Alignment.CENTER, 7, -170, 135);
                 st = new SpriteText("Gives You One", 15, SpriteText.Alignment.CENTER, 7, -170, 115);
                 st = new SpriteText("Automatic Cookie", 15, SpriteText.Alignment.CENTER, 7, -170, 95);
                 st = new SpriteText("Every Second", 15, SpriteText.Alignment.CENTER, 7, -170, 75);
                 st = new SpriteText("Costs 10 Cookies", 15, SpriteText.Alignment.CENTER, 7, -170, 55);
-
+                GameObject CookieAirDrop = new CookieAirDrop();
+                CookieAirDrop.setPosition(-25, 175);
+                st = new SpriteText("+5 Auto Clicks", 15, SpriteText.Alignment.CENTER, 7, -25, 135);
+                st = new SpriteText("Gives You Five", 15, SpriteText.Alignment.CENTER, 7, -25, 115);
+                st = new SpriteText("Automatic Cookies", 15, SpriteText.Alignment.CENTER, 7, -25, 95);
+                st = new SpriteText("Every Second", 15, SpriteText.Alignment.CENTER, 7, -25, 75);
+                st = new SpriteText("Costs 100 Cookies", 15, SpriteText.Alignment.CENTER, 7, -25, 55);
             }
 
         }
