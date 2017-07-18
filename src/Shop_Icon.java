@@ -19,7 +19,11 @@ public class Shop_Icon extends GameObject {
                 GameObject sickbackrounddude = new Shop_Backround();
                 st = new SpriteText("The Shop", 32, SpriteText.Alignment.CENTER, 20, 0, 250);
                 GameObject PlusUno = new ClickPower();
-                PlusUno.setPosition(-360, 175);
+                PlusUno.setPosition(-315, 175);
+                st = new SpriteText("+1 Click Power", 15, SpriteText.Alignment.CENTER, 7, -315, 135);
+                st = new SpriteText("Each Click Gives You", 15, SpriteText.Alignment.CENTER, 7, -315, 115);
+                st = new SpriteText("One More Cookie", 15, SpriteText.Alignment.CENTER, 7, -315, 95);
+                st = new SpriteText("Costs 5 Cookies", 15, SpriteText.Alignment.CENTER, 7, -315, 75);
 
             }
 
