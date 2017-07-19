@@ -11,6 +11,7 @@ public class CookieButton extends GameObject {
     int change = 1;
     SpriteText st;
     Boolean bool = true;
+    static boolean shop = false;
 
     public CookieButton() {
         super("CookieButton", 200, 200, "Cookie-Button.png", 2, 1, 2, 0.0f);
