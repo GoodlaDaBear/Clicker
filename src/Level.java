@@ -10,6 +10,13 @@ public class Level extends GameLevel {
     static  int drop = 0;
     static int truck = 0;
     static int cloud = 0;
+    static int powerCost = 5;
+    static int autoCost = 10;
+    static int auto5Cost = 100;
+    static  int dropCost = 100;
+    static int truckCost = 700;
+    static int cloudCost = 1500;
+
 
     @Override
     public void create() {
@@ -28,7 +35,7 @@ public class Level extends GameLevel {
         st = new SpriteText("+1 Click Power", 15, SpriteText.Alignment.CENTER, 7, 685, 135);
         st = new SpriteText("Each Click Gives You", 15, SpriteText.Alignment.CENTER, 7, 685, 115);
         st = new SpriteText("One More Cookie", 15, SpriteText.Alignment.CENTER, 7, 685, 95);
-        st = new SpriteText("Costs 5 Cookies", 15, SpriteText.Alignment.CENTER, 7, 685, 75);
+        st = new SpriteText("Costs", 15, SpriteText.Alignment.CENTER, 7, 685, 75); st = new SpriteText("Costs 5 Cookies", 15, SpriteText.Alignment.CENTER, 7, 685, 75);
         GameObject AutoClick = new AutoClick();
         AutoClick.setPosition(830, 175);
         st = new SpriteText("+1 Auto Click", 15, SpriteText.Alignment.CENTER, 7, 830, 135);
@@ -37,30 +44,39 @@ public class Level extends GameLevel {
         st = new SpriteText("Every Second", 15, SpriteText.Alignment.CENTER, 7, 830, 75);
         st = new SpriteText("Costs 10 Cookies", 15, SpriteText.Alignment.CENTER, 7, 830, 55);
         st = new SpriteText("Hand That Clicks", 15, SpriteText.Alignment.CENTER, 7, 830, 35);
-        GameObject CookieAirDrop = new CookieAirDrop();
-        CookieAirDrop.setPosition(975, 175);
+        GameObject AutoClicker5 = new AutoClicker5();
+        AutoClicker5.setPosition(975, 175);
         st = new SpriteText("+5 Auto Clicks", 15, SpriteText.Alignment.CENTER, 7, 975, 135);
         st = new SpriteText("Gives You Five", 15, SpriteText.Alignment.CENTER, 7, 975, 115);
         st = new SpriteText("Automatic Cookies", 15, SpriteText.Alignment.CENTER, 7, 975, 95);
         st = new SpriteText("Every Second", 15, SpriteText.Alignment.CENTER, 7, 975, 75);
         st = new SpriteText("Costs 100 Cookies", 15, SpriteText.Alignment.CENTER, 7, 975, 55);
-        st = new SpriteText("Cookie Air Drops", 15, SpriteText.Alignment.CENTER, 7, 975, 35);
-        GameObject CookieTruck = new CookieTruck();
-        CookieTruck.setPosition(1120, 175);
-        st = new SpriteText("+20 Auto Clicks", 15, SpriteText.Alignment.CENTER, 7, 1120, 135);
-        st = new SpriteText("Gives You 20", 15, SpriteText.Alignment.CENTER, 7, 1120, 115);
+        st = new SpriteText("5 Click Hands", 15, SpriteText.Alignment.CENTER, 7, 975, 35);
+        GameObject CookieAirDrop = new CookieAirDrop();
+        CookieAirDrop.setPosition(1120, 175);
+        st = new SpriteText("+5 Auto Clicks", 15, SpriteText.Alignment.CENTER, 7, 1120, 135);
+        st = new SpriteText("Gives You Five", 15, SpriteText.Alignment.CENTER, 7, 1120, 115);
         st = new SpriteText("Automatic Cookies", 15, SpriteText.Alignment.CENTER, 7, 1120, 95);
         st = new SpriteText("Every Second", 15, SpriteText.Alignment.CENTER, 7, 1120, 75);
-        st = new SpriteText("Costs 700 Cookies", 15, SpriteText.Alignment.CENTER, 7, 1120, 55);
-        st = new SpriteText("Cookie Trucks", 15, SpriteText.Alignment.CENTER, 7, 1120, 35);
-        GameObject CookieCloud = new CookieCloud();
-        CookieCloud.setPosition(1265, 175);
-        st = new SpriteText("+100 Auto Clicks", 15, SpriteText.Alignment.CENTER, 7, 1265, 135);
+        st = new SpriteText("Costs 100 Cookies", 15, SpriteText.Alignment.CENTER, 7, 1120, 55);
+        st = new SpriteText("5 Click Hands", 15, SpriteText.Alignment.CENTER, 7, 1120, 35);
+        GameObject CookieTruck = new CookieTruck();
+        CookieTruck.setPosition(1265, 175);
+        st = new SpriteText("+20 Auto Clicks", 15, SpriteText.Alignment.CENTER, 7, 1265, 135);
         st = new SpriteText("Gives You 20", 15, SpriteText.Alignment.CENTER, 7, 1265, 115);
         st = new SpriteText("Automatic Cookies", 15, SpriteText.Alignment.CENTER, 7, 1265, 95);
         st = new SpriteText("Every Second", 15, SpriteText.Alignment.CENTER, 7, 1265, 75);
-        st = new SpriteText("Costs 1500 Cookies", 15, SpriteText.Alignment.CENTER, 7, 1265, 55);
-        st = new SpriteText("Cookie Clouds", 15, SpriteText.Alignment.CENTER, 7, 1265, 35);
+        st = new SpriteText("Costs 700 Cookies", 15, SpriteText.Alignment.CENTER, 7, 1265, 55);
+        st = new SpriteText("Cookie Trucks", 15, SpriteText.Alignment.CENTER, 7, 1265, 35);
+        GameObject CookieCloud = new CookieCloud();
+        CookieCloud.setPosition(685, -25);
+        st = new SpriteText("+100 Auto Clicks", 15, SpriteText.Alignment.CENTER, 7, 685, -45);
+        st = new SpriteText("Gives You 20", 15, SpriteText.Alignment.CENTER, 7, 685, -65);
+        st = new SpriteText("Automatic Cookies", 15, SpriteText.Alignment.CENTER, 7, 685, -85);
+        st = new SpriteText("Every Second", 15, SpriteText.Alignment.CENTER, 7, 685, 75);
+        st = new SpriteText("Costs 1500 Cookies", 15, SpriteText.Alignment.CENTER, 7, 685, 55);
+        st = new SpriteText("Cookie Clouds", 15, SpriteText.Alignment.CENTER, 7, 685, 35);
+
         GameObject Exit_Shop = new Exit_Shop();
         Exit_Shop.setPosition(650, -225);
 
