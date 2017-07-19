@@ -13,7 +13,8 @@ public class AutoClick extends GameObject{
 
     boolean debounce = true;
 
-   SpriteText st = new SpriteText("" + Level.autoCost, 15, SpriteText.Alignment.CENTER, 7, 829, 55);;
+
+    SpriteText st = new SpriteText("" + Level.autoCost, 15, SpriteText.Alignment.CENTER, 7, 829, 55);;
     @Override
     public void update(float dt){
 
@@ -25,7 +26,7 @@ public class AutoClick extends GameObject{
                     CookieButton cookieButton = (CookieButton) ObjectManager.getGameObjectByName("CookieButton");
                     CookieButton.cookies = CookieButton.cookies - Level.autoCost;
                     Level.auto++;
-                    Level.autoCost = Level.autoCost * 2;
+                    Level.autoCost = (Level.autoCost + (int) (Level.autoCost * 2f));
                     System.out.println(Level.autoCost);
                     st.Kill();
                     st = new SpriteText("" + Level.autoCost, 15, SpriteText.Alignment.CENTER, 7, 829, 55);
