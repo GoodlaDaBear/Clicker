@@ -8,8 +8,19 @@ public class Cookie extends GameObject {
     int xDir;
     int yDir;
 
-    public Cookie(){
+    public Cookie(int count){
         super("Cookie", 50, 50, "Cookie.png");
+        if(count%1000 == 0){
+            System.out.println(count + ":C");
+            setScale(3,3);
+        }else if(count%100 == 0)
+        {
+            System.out.println(count + ":A");
+            setScale(2, 2);
+        }else{
+            System.out.println("B");
+            setScale(1,1);
+        }
         Random rand = new Random();
         xDir = rand.nextInt() % 10;
         yDir = rand.nextInt() % 10;
