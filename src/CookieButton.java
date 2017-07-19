@@ -9,6 +9,8 @@ import java.awt.event.KeyEvent;
 public class CookieButton extends GameObject {
     static int cookies = 0;
     int change = 1;
+    int count = 0;
+
     SpriteText st;
     Boolean bool = true;
     static boolean shop = false;
@@ -26,9 +28,10 @@ public class CookieButton extends GameObject {
                 if (InputManager.isMouseButtonTriggered(0)) {
 
                     cookies = cookies + change;
+                    count+=1;
                     st.Change("Cookies: " + cookies);
                     animationData.goToAndStop(0);
-                    GameObject cookie = new Cookie();
+                    GameObject cookie = new Cookie(count);
                 }
                 if (InputManager.isMouseButtonReleased(0)) {
                     animationData.goToAndStop(1);
@@ -36,9 +39,10 @@ public class CookieButton extends GameObject {
             }
             if (InputManager.isTriggered(KeyEvent.VK_SPACE)) {
                 cookies = cookies + change;
+                count+= 1;
                 st.Change("Cookies: " + cookies);
                 animationData.goToFrame(0);
-                GameObject cookie = new Cookie();
+                GameObject cookie = new Cookie(count);
             }
             if (InputManager.isReleased(KeyEvent.VK_SPACE)) {
                 animationData.goToFrame(1);
