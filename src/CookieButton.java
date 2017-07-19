@@ -10,6 +10,7 @@ public class CookieButton extends GameObject {
     int cookies = 0;
     int change = 1;
     SpriteText st;
+    Boolean bool = true;
 
     public CookieButton() {
         super("CookieButton", 200, 200, "Cookie-Button.png", 2, 1, 2, 0.0f);
@@ -19,26 +20,28 @@ public class CookieButton extends GameObject {
 
     @Override
     public void update(float dt) {
-        if (InputManager.getMousePosition().getX() < 460 && InputManager.getMousePosition().getX() > 315 && InputManager.getMousePosition().getY() < 315 && InputManager.getMousePosition().getY() > 265) {
-            if (InputManager.isMouseButtonTriggered(0)) {
+        if(bool == true) {
+            if (InputManager.getMousePosition().getX() < 460 && InputManager.getMousePosition().getX() > 315 && InputManager.getMousePosition().getY() < 315 && InputManager.getMousePosition().getY() > 265) {
+                if (InputManager.isMouseButtonTriggered(0)) {
 
+                    cookies = cookies + change;
+                    st.Change("Cookies: " + cookies);
+                    animationData.goToAndStop(0);
+                    GameObject cookie = new Cookie();
+                }
+                if (InputManager.isMouseButtonReleased(0)) {
+                    animationData.goToAndStop(1);
+                }
+            }
+            if (InputManager.isTriggered(KeyEvent.VK_SPACE)) {
                 cookies = cookies + change;
                 st.Change("Cookies: " + cookies);
-                animationData.goToAndStop(1);
+                animationData.goToFrame(0);
                 GameObject cookie = new Cookie();
             }
-            if (InputManager.isMouseButtonTriggered(0)) {
-                animationData.goToAndStop(0);
+            if (InputManager.isReleased(KeyEvent.VK_SPACE)) {
+                animationData.goToFrame(1);
             }
-        }
-        if (InputManager.isTriggered(KeyEvent.VK_SPACE)) {
-            cookies = cookies + change;
-            st.Change("Cookies: " + cookies);
-            animationData.goToFrame(0);
-            GameObject cookie = new Cookie();
-        }
-        if (InputManager.isReleased(KeyEvent.VK_SPACE)) {
-            animationData.goToFrame(1);
         }
     }
 
