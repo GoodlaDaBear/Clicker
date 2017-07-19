@@ -1,4 +1,3 @@
-import edu.digipen.Game;
 import edu.digipen.gameobject.GameObject;
 
 import java.util.Random;
