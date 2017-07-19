@@ -24,9 +24,7 @@ public class ClickPower extends GameObject                                      
                     debounce = false;
                     CookieButton cookieButton = (CookieButton) ObjectManager.getGameObjectByName("CookieButton");
                    Level.power++;
-                    setModulationColor(1f, 0f, 0f, 0.5f);
 
-                    setModulationColor(0f, 0f, 0f,0f);
 
                 }
                 if (InputManager.isMouseButtonReleased(0)) {
