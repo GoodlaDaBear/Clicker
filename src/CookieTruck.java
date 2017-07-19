@@ -21,8 +21,7 @@ public class CookieTruck extends GameObject {
                 if (InputManager.isMouseButtonPressed(0) && debounce) {
                     debounce = false;
                     CookieButton cookieButton = (CookieButton) ObjectManager.getGameObjectByName("CookieButton");
-                    cookieButton.change++;
-                    System.out.println(cookieButton.change);
+                    Level.truck++;
                 }
                 if (InputManager.isMouseButtonReleased(0)) {
                     debounce = true;

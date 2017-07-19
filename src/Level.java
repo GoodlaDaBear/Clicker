@@ -3,6 +3,14 @@ import edu.digipen.level.GameLevel;
 
 public class Level extends GameLevel {
     SpriteText st;
+
+    static int power = 0;
+    static int auto = 0;
+    static int auto5 = 0;
+    static  int drop = 0;
+    static int truck = 0;
+    static int cloud = 0;
+
     @Override
     public void create() {
 
@@ -53,12 +61,6 @@ public class Level extends GameLevel {
         st = new SpriteText("Every Second", 15, SpriteText.Alignment.CENTER, 7, 1265, 75);
         st = new SpriteText("Costs 1500 Cookies", 15, SpriteText.Alignment.CENTER, 7, 1265, 55);
         st = new SpriteText("Cookie Clouds", 15, SpriteText.Alignment.CENTER, 7, 1265, 35);
-
-
-
-
-
-
         GameObject Exit_Shop = new Exit_Shop();
         Exit_Shop.setPosition(650, -225);
 
