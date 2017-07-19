@@ -80,7 +80,7 @@ public class Level extends GameLevel {
         GameObject Exit_Shop = new Exit_Shop();
         Exit_Shop.setPosition(650, -225);
         GameObject bettertap = new bettertap();
-        bettertap.setPosition(0,0);
+        bettertap.setPosition(-300,200);
 
     }
 
