@@ -8,7 +8,7 @@ import java.awt.event.KeyEvent;
  */
 public class CookieButton extends GameObject {
     static int cookies = 0;
-    int change = 1;
+    static int change = 1;
     int count = 0;
 
     SpriteText st;

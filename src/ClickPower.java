@@ -25,7 +25,8 @@ public class ClickPower extends GameObject                                      
                 if (InputManager.isMouseButtonPressed(0) && debounce && CookieButton.cookies >= Level.powerCost) {
                     debounce = false;
                     CookieButton cookieButton = (CookieButton) ObjectManager.getGameObjectByName("CookieButton");
-                   Level.power++;
+                    Level.power++;
+                    CookieButton.change++;
                     CookieButton.cookies = CookieButton.cookies - Level.powerCost;
                     Level.powerCost = (Level.powerCost + (int) (Level.powerCost * 1.5f));
                     System.out.println(Level.powerCost);

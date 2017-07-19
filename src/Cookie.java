@@ -11,7 +11,7 @@ public class Cookie extends GameObject {
         super("Cookie", 50, 50, "Cookie.png");
         if(count%1000 == 0){
             System.out.println(count + ":C");
-            setScale(3,3);
+            setScale(4,4);
         }else if(count%100 == 0)
         {
             System.out.println(count + ":A");
