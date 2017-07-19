@@ -10,6 +10,9 @@ public class Level extends GameLevel {
         CookieButton cookiebutton = new CookieButton();
         GameObject Shop_Icon = new Shop_Icon();
         Shop_Icon.setPosition(360, 250);
+        // GameObject box = new box();
+        // box.setPosition(200,50);
+        
         GameObject sickbackrounddude = new Shop_Backround();
         st = new SpriteText("The Shop", 32, SpriteText.Alignment.CENTER, 20, 1000, 250);
         GameObject PlusUno = new ClickPower();

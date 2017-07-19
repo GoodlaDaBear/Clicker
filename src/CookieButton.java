@@ -7,7 +7,7 @@ import java.awt.event.KeyEvent;
  * Created by ishaan.desai on 7/17/2017.
  */
 public class CookieButton extends GameObject {
-    int cookies = 0;
+    static int cookies = 0;
     int change = 1;
     SpriteText st;
     Boolean bool = true;
