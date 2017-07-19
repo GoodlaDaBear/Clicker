@@ -25,8 +25,8 @@ public class Level extends GameLevel {
         CookieButton cookiebutton = new CookieButton();
         GameObject Shop_Icon = new Shop_Icon();
         Shop_Icon.setPosition(360, 250);
-        GameObject box = new box();
-        box.setPosition(200,50);
+        GameObject cookies = new cookies();
+        cookies.setPosition(200,50);
         
         GameObject sickbackrounddude = new Shop_Backround();
         st = new SpriteText("The Shop", 32, SpriteText.Alignment.CENTER, 20, 1000, 250);
@@ -79,7 +79,8 @@ public class Level extends GameLevel {
 
         GameObject Exit_Shop = new Exit_Shop();
         Exit_Shop.setPosition(650, -225);
-
+        GameObject bettertap = new bettertap();
+        bettertap.setPosition(0,0);
 
     }
 
