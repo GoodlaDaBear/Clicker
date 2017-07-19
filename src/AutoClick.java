@@ -13,16 +13,24 @@ public class AutoClick extends GameObject{
 
     boolean debounce = true;
 
+
+    SpriteText st = new SpriteText("" + Level.autoCost, 15, SpriteText.Alignment.CENTER, 7, 829, 55);;
     @Override
     public void update(float dt){
 
 
         if(CookieButton.shop == true) {
-            if (InputManager.getMousePosition().getX() < 105 && InputManager.getMousePosition().getX() > 55 && InputManager.getMousePosition().getY() < 160 && InputManager.getMousePosition().getY() > 110) {
-                if (InputManager.isMouseButtonPressed(0) && debounce) {
+            if (InputManager.getMousePosition().getX() < 251 && InputManager.getMousePosition().getX() > 208 && InputManager.getMousePosition().getY() < 155 && InputManager.getMousePosition().getY() > 115) {
+                if (InputManager.isMouseButtonPressed(0) && debounce && CookieButton.cookies >= Level.autoCost) {
                     debounce = false;
                     CookieButton cookieButton = (CookieButton) ObjectManager.getGameObjectByName("CookieButton");
+                    CookieButton.cookies = CookieButton.cookies - Level.autoCost;
                     Level.auto++;
+                    Level.autoCost = (Level.autoCost + (int) (Level.autoCost * 2f));
+                    System.out.println(Level.autoCost);
+                    st.Kill();
+                    st = new SpriteText("" + Level.autoCost, 15, SpriteText.Alignment.CENTER, 7, 829, 55);
+
                 }
                 if (InputManager.isMouseButtonReleased(0)) {
                     debounce = true;

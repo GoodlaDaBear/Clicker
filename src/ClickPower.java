@@ -14,19 +14,23 @@ public class ClickPower extends GameObject                                      
 
     boolean debounce = true;
 
+    SpriteText st = new SpriteText("" + Level.autoCost, 15, SpriteText.Alignment.CENTER, 7, 680, 75);
+
     @Override
     public void update(float dt){
 
 
         if(CookieButton.shop == true) {
             if (InputManager.getMousePosition().getX() < 105 && InputManager.getMousePosition().getX() > 55 && InputManager.getMousePosition().getY() < 160 && InputManager.getMousePosition().getY() > 110) {
-                if (InputManager.isMouseButtonPressed(0) && debounce) {
+                if (InputManager.isMouseButtonPressed(0) && debounce && CookieButton.cookies >= Level.powerCost) {
                     debounce = false;
                     CookieButton cookieButton = (CookieButton) ObjectManager.getGameObjectByName("CookieButton");
                    Level.power++;
-                    setModulationColor(1f, 0f, 0f, 0.5f);
-
-                    setModulationColor(0f, 0f, 0f,0f);
+                    CookieButton.cookies = CookieButton.cookies - Level.powerCost;
+                    Level.powerCost = (Level.powerCost + (int) (Level.powerCost * 1.5f));
+                    System.out.println(Level.powerCost);
+                    st.Kill();
+                    st = new SpriteText("" + Level.powerCost, 15, SpriteText.Alignment.CENTER, 7, 680, 75);
 
                 }
                 if (InputManager.isMouseButtonReleased(0)) {

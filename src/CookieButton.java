@@ -23,6 +23,7 @@ public class CookieButton extends GameObject {
 
     @Override
     public void update(float dt) {
+        st.Change("Cookies: " + cookies);
         if(bool == true) {
             if (InputManager.getMousePosition().getX() < 460 && InputManager.getMousePosition().getX() > 315 && InputManager.getMousePosition().getY() < 315 && InputManager.getMousePosition().getY() > 265) {
                 if (InputManager.isMouseButtonTriggered(0)) {
