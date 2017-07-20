@@ -51,7 +51,6 @@ public class bettertap extends GameObject {
 
 
         //System.out.println(powerup2);
-        System.out.println(oldChange);
         if(powerup2==true)
             if (getOpacity() > 0) {
                 if (InputManager.isMouseButtonReleased(0)) {
