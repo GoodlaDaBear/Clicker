@@ -17,13 +17,14 @@ public class CookieAirDrop extends GameObject {
     public void update(float dt) {
 
                 if(CookieButton.shop == true) {
-                if (InputManager.getMousePosition().getX() < 0 && InputManager.getMousePosition().getX() > 0 && InputManager.getMousePosition().getY() < 0 && InputManager.getMousePosition().getY() > 0) {
+                if (InputManager.getMousePosition().getX() < 542 && InputManager.getMousePosition().getX() > 498 && InputManager.getMousePosition().getY() < 156 && InputManager.getMousePosition().getY() > 113) {
                     if (InputManager.isMouseButtonPressed(0) && debounce && CookieButton.cookies >= Level.dropCost) {
                         debounce = false;
                         Level.drop++;
                         CookieButton.cookies = CookieButton.cookies - Level.dropCost;
-                        Level.auto5Cost = (Level.dropCost + (int) (Level.dropCost * 1.75f));
+                        Level.auto5Cost = (Level.dropCost + (int) (Level.dropCost * 1.5f));
                         System.out.println(Level.dropCost);
+                        Level.autoClicks = Level.autoClicks + 10;
                         st.Kill();
                         st = new SpriteText("Costs" + Level.dropCost + "Cookies", 15, SpriteText.Alignment.CENTER, 7, 1120, 55);
                     }

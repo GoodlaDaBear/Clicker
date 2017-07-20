@@ -21,7 +21,7 @@ public class ClickPower extends GameObject                                      
 
         if(CookieButton.shop == true) {
             if (InputManager.getMousePosition().getX() < 107 && InputManager.getMousePosition().getX() > 64 && InputManager.getMousePosition().getY() < 160 && InputManager.getMousePosition().getY() > 110) {
-                if (InputManager.isMouseButtonPressed(0) && debounce && CookieButton.cookies >= Level.powerCost) {
+                if (InputManager.isMouseButtonPressed(0) && debounce && CookieButton.cookies >= Level.powerCost && CookieButton.cookies >= 0) {
                     debounce = false;
                     Level.power++;
                     CookieButton.change++;

@@ -15,7 +15,8 @@ public class Level extends GameLevel {
     static int auto5Cost = 100;
     static  int dropCost = 500;
     static int truckCost = 800;
-    static int cloudCost = 1500;
+    static int cloudCost = 2500;
+    static int autoClicks = 0;
 
 
     @Override
@@ -61,7 +62,6 @@ public class Level extends GameLevel {
         st = new SpriteText("Gives You Five", 15, SpriteText.Alignment.CENTER, 7, 1120, 115);
         st = new SpriteText("Automatic Cookies", 15, SpriteText.Alignment.CENTER, 7, 1120, 95);
         st = new SpriteText("Every Second", 15, SpriteText.Alignment.CENTER, 7, 1120, 75);
-        st = new SpriteText("Costs 500 Cookies", 15, SpriteText.Alignment.CENTER, 7, 1120, 55);
         st = new SpriteText("10 Click Hands", 15, SpriteText.Alignment.CENTER, 7, 1120, 35);
         GameObject CookieTruck = new CookieTruck();
         CookieTruck.setPosition(1265, 175);
@@ -69,7 +69,6 @@ public class Level extends GameLevel {
         st = new SpriteText("Gives You 20", 15, SpriteText.Alignment.CENTER, 7, 1265, 115);
         st = new SpriteText("Automatic Cookies", 15, SpriteText.Alignment.CENTER, 7, 1265, 95);
         st = new SpriteText("Every Second", 15, SpriteText.Alignment.CENTER, 7, 1265, 75);
-        st = new SpriteText("Costs 800 Cookies", 15, SpriteText.Alignment.CENTER, 7, 1265, 55);
         st = new SpriteText("Cookie Trucks", 15, SpriteText.Alignment.CENTER, 7, 1265, 35);
         GameObject CookieCloud = new CookieCloud();
         CookieCloud.setPosition(685, -25);
@@ -77,7 +76,6 @@ public class Level extends GameLevel {
         st = new SpriteText("Gives You 20", 15, SpriteText.Alignment.CENTER, 7, 685, -85);
         st = new SpriteText("Automatic Cookies", 15, SpriteText.Alignment.CENTER, 7, 685, -105);
         st = new SpriteText("Every Second", 15, SpriteText.Alignment.CENTER, 7, 685, -125);
-        st = new SpriteText("Costs 1500 Cookies", 15, SpriteText.Alignment.CENTER, 7, 685, -145);
         st = new SpriteText("Cookie Clouds", 15, SpriteText.Alignment.CENTER, 7, 685, -165);
 
         GameObject Exit_Shop = new Exit_Shop();

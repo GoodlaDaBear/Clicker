@@ -19,10 +19,11 @@ public class AutoClicker5 extends GameObject{
 
         if(CookieButton.shop == true) {
             if (InputManager.getMousePosition().getX() < 396 && InputManager.getMousePosition().getX() > 354 && InputManager.getMousePosition().getY() < 157 && InputManager.getMousePosition().getY() > 115) {
-                if (InputManager.isMouseButtonPressed(0) && debounce && CookieButton.cookies >= Level.auto5Cost) {
+                if (InputManager.isMouseButtonPressed(0) && debounce && CookieButton.cookies >= Level.auto5Cost && CookieButton.cookies >= 0) {
                     debounce = false;
                     CookieButton.cookies = CookieButton.cookies - Level.auto5Cost;
                     Level.auto5++;
+                    Level.autoClicks = Level.autoClicks + 5;
                     Level.auto5Cost = (Level.auto5Cost + (int) (Level.auto5Cost * 1.75f));
                     System.out.println(Level.auto5Cost);
                     st.Kill();

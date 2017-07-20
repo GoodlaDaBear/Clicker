@@ -21,10 +21,11 @@ public class AutoClick extends GameObject{
 
         if(CookieButton.shop == true) {
             if (InputManager.getMousePosition().getX() < 251 && InputManager.getMousePosition().getX() > 208 && InputManager.getMousePosition().getY() < 155 && InputManager.getMousePosition().getY() > 115) {
-                if (InputManager.isMouseButtonPressed(0) && debounce && CookieButton.cookies >= Level.autoCost) {
+                if (InputManager.isMouseButtonPressed(0) && debounce && CookieButton.cookies >= Level.autoCost && CookieButton.cookies >= 0) {
                     debounce = false;
                     CookieButton.cookies = CookieButton.cookies - Level.autoCost;
                     Level.auto++;
+                    Level.autoClicks = Level.autoClicks + 1;
                     Level.autoCost = (Level.autoCost + (int) (Level.autoCost * 2f));
                     System.out.println(Level.autoCost);
                     st.Kill();
