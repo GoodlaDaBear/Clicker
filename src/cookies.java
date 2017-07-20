@@ -41,7 +41,7 @@ public class cookies extends GameObject {
 
             if (powerup == true) {
                 if (InputManager.isMouseButtonReleased(0)) {
-                    System.out.println(InputManager.getMousePosition());
+                    //System.out.println(InputManager.getMousePosition());
                     if (InputManager.getMousePosition().getX() < 733.0 && InputManager.getMousePosition().getX() > 633.0 && InputManager.getMousePosition().getY() < 294.0 && InputManager.getMousePosition().getY() > 192) {
 
                         st = new SpriteText("YOU GOT COOKIES", 15, SpriteText.Alignment.CENTER, 7, 285, 50);
