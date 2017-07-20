@@ -89,7 +89,8 @@ public class Level extends GameLevel {
         Exit_Shop.setPosition(650, -225);
         GameObject bettertap = new bettertap();
         bettertap.setPosition(-300,200);
-
+        GameObject Powerupmoretap = new Powerupmoretap();
+        Powerupmoretap.setPosition(-280,-175);
     }
 
     @Override

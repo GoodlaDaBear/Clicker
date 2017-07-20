@@ -49,12 +49,11 @@ public class cookies extends GameObject {
                         isTextShowing = true;
                         texttimer = 2;
                         CookieButton.cookies = (CookieButton.cookies + (int) (CookieButton.cookies * 0.2f));
-                        boxcounter=0;
-                        powerupcounter=20;
+                        boxcounter = 0;
+                        powerupcounter = 20;
                     }
 
                 }
             }
+            }
         }
-
-}

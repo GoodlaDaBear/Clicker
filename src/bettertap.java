@@ -1,17 +1,21 @@
 /**
  * Created by matthew.yamamoto on 7/19/2017.
  */
+
 import edu.digipen.InputManager;
 import edu.digipen.gameobject.GameObject;
 import edu.digipen.gameobject.ObjectManager;
+
 public class bettertap extends GameObject {
     SpriteText st;
     float powerupcounter2 = 1;
-    boolean powerup2= false;
-    float texttimer2=2;
-    float boxcounter2=3;
+    boolean powerup2 = false;
+    float texttimer2 = 2;
+    float boxcounter2 = 5;
     boolean isTextShowing = false;
-    float powerupaffect =7;
+    float powerupaffect = 7;
+
+    int oldChange;
 
     public bettertap() {
         super("better taps", 350, 219, "bettertap.png");
@@ -20,39 +24,52 @@ public class bettertap extends GameObject {
 
     @Override
     public void update(float dt) {
-        texttimer2-= dt;
-        if(texttimer2<=0 && isTextShowing){
+        texttimer2 -= dt;
+        if (texttimer2 <= 0 && isTextShowing) {
             st.Kill();
             isTextShowing = false;
         }
-        boxcounter2-=dt;
-        if (boxcounter2<= 0){
+        boxcounter2 -= dt;
+        if (boxcounter2 <= 0) {
             setOpacity(0);
 
         }
         powerupcounter2 -= dt;
         if (powerupcounter2 <= 0) {
             setOpacity(100);
+            powerup2=true;
+        }
+        if(powerupaffect <=0){
+            powerup2=false;
+            CookieButton.change = oldChange;
+            powerupaffect = 7;
+        }
+        else
+        {
+            powerupaffect -=dt;
         }
 
-        powerupaffect -= dt;
-        if (powerupaffect<=0){
-            if (InputManager.isMouseButtonReleased(0)) {
-                System.out.println(InputManager.getMousePosition());
-                if (InputManager.getMousePosition().getX() < 145.0 && InputManager.getMousePosition().getX() > 60.0 && InputManager.getMousePosition().getY() < 99.0 && InputManager.getMousePosition().getY() > 59.0) {
-                    st = new SpriteText("YOU GET 5 TIMES THE CLICK POWER FOR 7 SECONDS", 15, SpriteText.Alignment.CENTER, 7, -200, 200);
-                    // make the current tap times 5.
-                    CookieButton.change = CookieButton.change *5;
-                    isTextShowing = true;
-                    texttimer2 = 2;
-                    boxcounter2=0;
-                    powerupcounter2=60;
-                }
 
+        //System.out.println(powerup2);
+        System.out.println(oldChange);
+        if(powerup2==true)
+            if (getOpacity() > 0) {
+                if (InputManager.isMouseButtonReleased(0)) {
+                    System.out.println(InputManager.getMousePosition());
+                    if (InputManager.getMousePosition().getX() < 154.0 && InputManager.getMousePosition().getX() > 52.0 && InputManager.getMousePosition().getY() < 156.0 && InputManager.getMousePosition().getY() > 53.0) {
+                        st = new SpriteText("YOU GET 5 TIMES THE CLICK POWER FOR 7 SECONDS", 15, SpriteText.Alignment.CENTER, 7, -200, 200);
+                        oldChange = CookieButton.change;
+                        CookieButton.change = CookieButton.change * 5;
+                        // make the current tap times 5.
+                        isTextShowing = true;
+                        texttimer2 = 2;
+                        boxcounter2 = 0;
+                        powerupcounter2 = 60;
+                        powerupaffect = 7;
+                    }
+                }
             }
         }
 
 
-
     }
-}
