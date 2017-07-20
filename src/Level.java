@@ -3,7 +3,7 @@ import edu.digipen.level.GameLevel;
 
 public class Level extends GameLevel {
     SpriteText st;
-
+    float Counter = 1.0f;
     static int power = 0;
     static int auto = 0;
     static int auto5 = 0;
@@ -94,7 +94,12 @@ public class Level extends GameLevel {
 
     @Override
     public void update(float v) {
-
+    Counter -= v;
+        if(Counter <= 0)
+        {
+            CookieButton.cookies += autoClicks;
+            Counter = 1.0f;
+        }
 
     }
 
