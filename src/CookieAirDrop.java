@@ -1,6 +1,5 @@
 import edu.digipen.InputManager;
 import edu.digipen.gameobject.GameObject;
-import edu.digipen.gameobject.ObjectManager;
 
 /**
  * Created by marcus.yim on 7/18/2017.
@@ -12,15 +11,22 @@ public class CookieAirDrop extends GameObject {
 
     boolean debounce = true;
 
+    SpriteText  st = new SpriteText("Costs 500 Cookies", 15, SpriteText.Alignment.CENTER, 7, 1120, 55);
+
     @Override
     public void update(float dt) {
 
                 if(CookieButton.shop == true) {
-                if (InputManager.getMousePosition().getX() < 105 && InputManager.getMousePosition().getX() > 55 && InputManager.getMousePosition().getY() < 160 && InputManager.getMousePosition().getY() > 110) {
-                    if (InputManager.isMouseButtonPressed(0) && debounce) {
+                if (InputManager.getMousePosition().getX() < 542 && InputManager.getMousePosition().getX() > 498 && InputManager.getMousePosition().getY() < 156 && InputManager.getMousePosition().getY() > 113) {
+                    if (InputManager.isMouseButtonPressed(0) && debounce && CookieButton.cookies >= Level.dropCost) {
                         debounce = false;
-                        CookieButton cookieButton = (CookieButton) ObjectManager.getGameObjectByName("CookieButton");
                         Level.drop++;
+                        CookieButton.cookies = CookieButton.cookies - Level.dropCost;
+                        Level.auto5Cost = (Level.dropCost + (int) (Level.dropCost * 1.5f));
+                        System.out.println(Level.dropCost);
+                        Level.autoClicks = Level.autoClicks + 10;
+                        st.Kill();
+                        st = new SpriteText("Costs" + Level.dropCost + "Cookies", 15, SpriteText.Alignment.CENTER, 7, 1120, 55);
                     }
                     if (InputManager.isMouseButtonReleased(0)) {
                         debounce = true;

@@ -50,7 +50,7 @@ public class cookies extends GameObject {
                         texttimer = 2;
                         CookieButton.cookies = (CookieButton.cookies + (int) (CookieButton.cookies * 0.2f));
                         boxcounter=0;
-                        powerupcounter=60;
+                        powerupcounter=20;
                     }
 
                 }
