@@ -37,6 +37,7 @@ public class Cookie extends GameObject {
         if(yDir == 0) {
             yDir = 2;
         }
+        //hi
         setPosition(getPositionX() + xDir, getPositionY()+ yDir);
 
         if(Count%1000 == 0) {
