@@ -90,15 +90,10 @@ public class Level extends GameLevel {
     public void initialize() {
 
     }
-
-
-
     @Override
     public void update(float v) {
 
-
     }
-
     @Override
     public void uninitialize() {
 
