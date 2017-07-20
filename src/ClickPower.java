@@ -26,8 +26,10 @@ public class ClickPower extends GameObject                                      
                     CookieButton.cookies = CookieButton.cookies - Level.powerCost;
                     Level.power++;
                     Level.powerCost = (Level.powerCost + (int) (Level.powerCost * 2f));
+                    CookieButton.change++;
                     st.Kill();
                     st = new SpriteText("Costs " + Level.powerCost + " Cookies", 15, SpriteText.Alignment.CENTER, 7, 680, 75);
+                    st = new SpriteText("You Have " + Level.power + " Clickers", 15, SpriteText.Alignment.CENTER, 7, 680, 75);
 
                 }
                 if (InputManager.isMouseButtonReleased(0)) {

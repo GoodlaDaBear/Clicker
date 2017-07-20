@@ -23,6 +23,7 @@ public class CookieCloud extends GameObject {
                     debounce = false;
                     CookieButton.cookies = CookieButton.cookies - Level.cloudCost;
                     Level.cloud++;
+                    Level.autoClicks = Level.autoClicks + 100;
                     Level.cloudCost = (Level.cloudCost + (int) (Level.cloudCost * 1.5f));
                     System.out.println(Level.cloudCost);
                     st.Kill();

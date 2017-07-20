@@ -23,7 +23,6 @@ public class Level extends GameLevel {
 
     @Override
     public void create() {
-       CookieButton.cookies = 2000000;
 
         GameObject sickbackrounddude = new Shop_Backround();
         GameObject wallpaper1 = new GameObject("Object1", 800, 600, "BlueWallpaper.png");
