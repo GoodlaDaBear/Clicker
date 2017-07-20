@@ -23,15 +23,14 @@ public class Level extends GameLevel {
 
     @Override
     public void create() {
-
+        GameObject sickbackrounddude = new Shop_Backround();
         GameObject wallpaper1 = new GameObject("Object1", 800, 600, "BlueWallpaper.png");
         CookieButton cookiebutton = new CookieButton();
         GameObject Shop_Icon = new Shop_Icon();
         Shop_Icon.setPosition(360, 250);
         GameObject cookies = new cookies();
         cookies.setPosition(200,50);
-        
-        GameObject sickbackrounddude = new Shop_Backround();
+
         st = new SpriteText("The Shop", 32, SpriteText.Alignment.CENTER, 20, 1000, 250);
         GameObject ClickPower = new ClickPower();
         ClickPower.setPosition(685, 175);

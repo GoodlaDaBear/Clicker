@@ -8,7 +8,7 @@ public class Shop_Backround extends GameObject {
 
 
     public Shop_Backround() {
-        super("Shop_Backround", 5000, 5000, "Shop_Icon.png");
+        super("Shop_Backround", 5000, 5000, "Backround.png");
         setPosition(1000,0);
     }
 

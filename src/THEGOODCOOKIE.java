@@ -19,7 +19,7 @@ public class THEGOODCOOKIE extends GameObject{
 
 
         if(CookieButton.shop == true) {
-            if (InputManager.getMousePosition().getX() < 0 && InputManager.getMousePosition().getX() > 0 && InputManager.getMousePosition().getY() < 0 && InputManager.getMousePosition().getY() > 0) {
+            if (InputManager.getMousePosition().getX() < 260 && InputManager.getMousePosition().getX() > 217 && InputManager.getMousePosition().getY() < 355 && InputManager.getMousePosition().getY() > 313) {
                 if (InputManager.isMouseButtonPressed(0) && debounce && CookieButton.cookies >= Level.trueCookieCost && CookieButton.cookies >= 0 && Level.trueCookie < 1) {
                     debounce = false;
                     Level.trueCookie++;
