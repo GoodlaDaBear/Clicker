@@ -6,17 +6,22 @@ public class Cookie extends GameObject {
 
     int xDir;
     int yDir;
-    int Count;
+    long Count;
+    long Cookies;
 
-    public Cookie(int count){
+    public Cookie(long cookies){
         super("Cookie", 50, 50, "Cookie.png");
-        Count = count;
-        if(count%10000 == 0){
+        Cookies = CookieButton.cookies;
+        if(CookieButton.cookies%1000000 <= CookieButton.change&& CookieButton.cookies != 1 ){
+            setScale(16, 16);
+        }else if(CookieButton.cookies%100000 <= CookieButton.change&& CookieButton.cookies != 1 ){
+            setScale(6, 6);
+        }else if(CookieButton.cookies%10000 <= CookieButton.change&& CookieButton.cookies != 1 ){
             setScale(4, 4);
-        } else if(count%1000 == 0){
-            setScale(2,2);
+        } else if(CookieButton.cookies%1000 <= CookieButton.change&& CookieButton.cookies != 1){
+            setScale(2, 2);
             setModulationColor(0, 0, 0, 0.5F);
-        }else if(count%100 == 0)
+        }else if(CookieButton.cookies%100 <= CookieButton.change&& CookieButton.cookies != 1)
         {
             setScale(2, 2);
         }else{
@@ -37,15 +42,22 @@ public class Cookie extends GameObject {
         if(yDir == 0) {
             yDir = 2;
         }
-        //hi
         setPosition(getPositionX() + xDir, getPositionY()+ yDir);
 
-        if(Count%1000 == 0) {
+        if(CookieButton.cookies%1000 <= CookieButton.change&& CookieButton.cookies != 1 ) {
 
             setModulationColor((float)Math.cos(counter), (float)Math.sin(counter), 1.0f - ((float)Math.cos(counter) + (float)Math.sin(counter)), 0.5F);
         }
-        if(Count%10000 == 0){
-            setModulationColor(0, 0, 0, 0);
+        if(CookieButton.cookies%10000 <= CookieButton.change&& CookieButton.cookies != 1 ) {
+            setModulationColor((float)Math.cos(counter), (float)Math.sin(counter), 1.0f - ((float)Math.cos(counter) + (float)Math.sin(counter)), 0.5F);
+        }
+        if(CookieButton.cookies%100000 <= CookieButton.change && CookieButton.cookies != 1){
+            setModulationColor((float)Math.cos(counter), (float)Math.sin(counter), 1.0f - ((float)Math.cos(counter) + (float)Math.sin(counter)), 0.5F);
+        }
+        if(CookieButton.cookies%1000000 <= CookieButton.change && CookieButton.cookies != 1){
+            setScale(8, 8);
+            setModulationColor((float) Math.cos(counter), (float) Math.sin(counter), 1.0f - ((float) Math.cos(counter) + (float) Math.sin(counter)), 0.5F);
         }
     }
 }
+
