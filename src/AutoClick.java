@@ -1,6 +1,5 @@
 import edu.digipen.InputManager;
 import edu.digipen.gameobject.GameObject;
-import edu.digipen.gameobject.ObjectManager;
 
 /**
  * Created by marcus.yim on 7/18/2017.
@@ -14,7 +13,8 @@ public class AutoClick extends GameObject{
     boolean debounce = true;
 
 
-    SpriteText st = new SpriteText("" + Level.autoCost, 15, SpriteText.Alignment.CENTER, 7, 829, 55);;
+
+    SpriteText st = new SpriteText("" + Level.autoCost, 15, SpriteText.Alignment.CENTER, 7, 829, 55);
     @Override
     public void update(float dt){
 
@@ -23,7 +23,6 @@ public class AutoClick extends GameObject{
             if (InputManager.getMousePosition().getX() < 251 && InputManager.getMousePosition().getX() > 208 && InputManager.getMousePosition().getY() < 155 && InputManager.getMousePosition().getY() > 115) {
                 if (InputManager.isMouseButtonPressed(0) && debounce && CookieButton.cookies >= Level.autoCost) {
                     debounce = false;
-                    CookieButton cookieButton = (CookieButton) ObjectManager.getGameObjectByName("CookieButton");
                     CookieButton.cookies = CookieButton.cookies - Level.autoCost;
                     Level.auto++;
                     Level.autoCost = (Level.autoCost + (int) (Level.autoCost * 2f));
