@@ -10,6 +10,7 @@ public class Level extends GameLevel {
     static  int drop = 0;
     static int truck = 0;
     static int cloud = 0;
+    static int trueCookie = 0;
     static int powerCost = 5;
     static int autoCost = 10;
     static int auto5Cost = 100;
@@ -17,6 +18,7 @@ public class Level extends GameLevel {
     static int truckCost = 800;
     static int cloudCost = 2500;
     static int autoClicks = 0;
+    static int trueCookieCost = 1000000;
 
 
     @Override
@@ -77,7 +79,13 @@ public class Level extends GameLevel {
         st = new SpriteText("Automatic Cookies", 15, SpriteText.Alignment.CENTER, 7, 685, -105);
         st = new SpriteText("Every Second", 15, SpriteText.Alignment.CENTER, 7, 685, -125);
         st = new SpriteText("Cookie Clouds", 15, SpriteText.Alignment.CENTER, 7, 685, -165);
-
+        GameObject THEGOODCOOKIE = new THEGOODCOOKIE();
+        THEGOODCOOKIE.setPosition(840, -25);
+        st = new SpriteText("This Is The One", 15, SpriteText.Alignment.CENTER, 7, 840, -65);
+        st = new SpriteText("True Cookie, Buy", 15, SpriteText.Alignment.CENTER, 7, 840, -85);
+        st = new SpriteText("This And You Are", 15, SpriteText.Alignment.CENTER, 7, 840, -105);
+        st = new SpriteText("Complete", 15, SpriteText.Alignment.CENTER, 7, 840, -125);
+        st = new SpriteText("Costs 1,000,000 Cookies", 15, SpriteText.Alignment.CENTER, 7, 840, -145);
         GameObject Exit_Shop = new Exit_Shop();
         Exit_Shop.setPosition(650, -225);
         GameObject bettertap = new bettertap();
