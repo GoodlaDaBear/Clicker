@@ -11,7 +11,8 @@ public class CookieAirDrop extends GameObject {
 
     boolean debounce = true;
 
-    SpriteText  st = new SpriteText("Costs 500 Cookies", 15, SpriteText.Alignment.CENTER, 7, 1120, 55);
+    SpriteText  st = new SpriteText("Costs " +Level.dropCost+ " Cookies", 15, SpriteText.Alignment.CENTER, 7, 1120, 35);
+    SpriteText et = new SpriteText("Costs " + Level.dropCost + " Cookies", 15, SpriteText.Alignment.CENTER, 7, 1120, 35);
 
     @Override
     public void update(float dt) {
@@ -22,11 +23,13 @@ public class CookieAirDrop extends GameObject {
                         debounce = false;
                         Level.drop++;
                         CookieButton.cookies = CookieButton.cookies - Level.dropCost;
-                        Level.auto5Cost = (Level.dropCost + (int) (Level.dropCost * 1.5f));
+                        Level.dropCost = (Level.dropCost + (int) (Level.dropCost * 1.5f));
                         System.out.println(Level.dropCost);
                         Level.autoClicks = Level.autoClicks + 10;
                         st.Kill();
-                        st = new SpriteText("Costs" + Level.dropCost + "Cookies", 15, SpriteText.Alignment.CENTER, 7, 1120, 55);
+                        et.Kill();
+                        st = new SpriteText("Costs " + Level.dropCost + " Cookies", 15, SpriteText.Alignment.CENTER, 7, 1120, 35);
+                        et = new SpriteText("You Have " + Level.drop+ " Cookie Drops", 15, SpriteText.Alignment.CENTER, 7, 1120, 15);
                     }
                     if (InputManager.isMouseButtonReleased(0)) {
                         debounce = true;
