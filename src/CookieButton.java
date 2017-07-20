@@ -29,7 +29,7 @@ public class CookieButton extends GameObject {
                 if (InputManager.isMouseButtonTriggered(0)) {
 
                     cookies = cookies + change;
-                    count+=1;
+                    count+=100;
                     st.Change("Cookies: " + cookies);
                     animationData.goToAndStop(0);
                     GameObject cookie = new Cookie(count);
@@ -40,7 +40,7 @@ public class CookieButton extends GameObject {
             }
             if (InputManager.isTriggered(KeyEvent.VK_SPACE)) {
                 cookies = cookies + change;
-                count+= 1;
+                count+= 100;
                 st.Change("Cookies: " + cookies);
                 animationData.goToFrame(0);
                 GameObject cookie = new Cookie(count);

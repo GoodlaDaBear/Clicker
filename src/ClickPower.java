@@ -1,5 +1,6 @@
 import edu.digipen.InputManager;
 import edu.digipen.gameobject.GameObject;
+import edu.digipen.gameobject.ObjectManager;
 
 /**
  * Created by marcus.yim on 7/18/2017.
@@ -25,6 +26,7 @@ public class ClickPower extends GameObject                                      
                     debounce = false;
                     Level.power++;
                     CookieButton.change++;
+                    CookieButton cookieButton = (CookieButton) ObjectManager.getGameObjectByName("CookieButton");
                     CookieButton.cookies = CookieButton.cookies - Level.powerCost;
                     Level.powerCost = (Level.powerCost + (int) (Level.powerCost * 1.5f));
                     System.out.println(Level.powerCost);
@@ -40,4 +42,6 @@ public class ClickPower extends GameObject                                      
             }
         }
     }
+
+
 }

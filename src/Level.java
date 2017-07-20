@@ -101,7 +101,7 @@ public class Level extends GameLevel {
 
     @Override
     public void update(float v) {
-    Counter -= v;
+        Counter -= v;
         if(Counter <= 0)
         {
             CookieButton.cookies += autoClicks;
