@@ -14,6 +14,7 @@ public class ClickPower extends GameObject                                      
     boolean debounce = true;
 
     SpriteText st = new SpriteText("Costs " + Level.powerCost + " Cookies", 15, SpriteText.Alignment.CENTER, 7, 680, 75);
+    SpriteText et = new SpriteText("Costs " + Level.powerCost + " Cookies", 15, SpriteText.Alignment.CENTER, 7, 680, 75);
 
     @Override
     public void update(float dt){
@@ -28,7 +29,9 @@ public class ClickPower extends GameObject                                      
                     Level.powerCost = (Level.powerCost + (int) (Level.powerCost * 2f));
                     CookieButton.change++;
                     st.Kill();
-                    st = new SpriteText("Costs " + Level.powerCost + " Cookies", 15, SpriteText.Alignment.CENTER, 7, 680, 75);
+                    et.Kill();
+                    et = new SpriteText("Costs " + Level.powerCost + " Cookies", 15, SpriteText.Alignment.CENTER, 7, 680, 75);
+                    st = new SpriteText("You Have " + Level.power + " Clickers", 15, SpriteText.Alignment.CENTER, 7, 680, 55);
 
                 }
                 if (InputManager.isMouseButtonReleased(0)) {
