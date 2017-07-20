@@ -1,6 +1,5 @@
 import edu.digipen.InputManager;
 import edu.digipen.gameobject.GameObject;
-import edu.digipen.gameobject.ObjectManager;
 
 /**
  * Created by matthew.yamamoto on 7/18/2017.
@@ -42,19 +41,18 @@ public class cookies extends GameObject {
 
             if (powerup == true) {
                 if (InputManager.isMouseButtonReleased(0)) {
-                    System.out.println(InputManager.getMousePosition());
-                    if (InputManager.getMousePosition().getX() < 692.0 && InputManager.getMousePosition().getX() > 537.0 && InputManager.getMousePosition().getY() < 309.0 && InputManager.getMousePosition().getY() > 215) {
+                    //System.out.println(InputManager.getMousePosition());
+                    if (InputManager.getMousePosition().getX() < 733.0 && InputManager.getMousePosition().getX() > 633.0 && InputManager.getMousePosition().getY() < 294.0 && InputManager.getMousePosition().getY() > 192) {
 
-                        st = new SpriteText("YOU GOT COOKIES", 15, SpriteText.Alignment.CENTER, 7, 200, 50);
+                        st = new SpriteText("YOU GOT COOKIES", 15, SpriteText.Alignment.CENTER, 7, 285, 50);
                         isTextShowing = true;
                         texttimer = 2;
                         CookieButton.cookies = (CookieButton.cookies + (int) (CookieButton.cookies * 0.2f));
-                        boxcounter=0;
-                        powerupcounter=20;
+                        boxcounter = 0;
+                        powerupcounter = 20;
                     }
 
                 }
             }
+            }
         }
-
-}

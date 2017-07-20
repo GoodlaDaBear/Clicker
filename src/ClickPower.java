@@ -1,6 +1,5 @@
 import edu.digipen.InputManager;
 import edu.digipen.gameobject.GameObject;
-import edu.digipen.gameobject.ObjectManager;
 
 /**
  * Created by marcus.yim on 7/18/2017.
@@ -24,12 +23,10 @@ public class ClickPower extends GameObject                                      
             if (InputManager.getMousePosition().getX() < 107 && InputManager.getMousePosition().getX() > 64 && InputManager.getMousePosition().getY() < 160 && InputManager.getMousePosition().getY() > 110) {
                 if (InputManager.isMouseButtonPressed(0) && debounce && CookieButton.cookies >= Level.powerCost && CookieButton.cookies >= 0) {
                     debounce = false;
-                    Level.power++;
-                    CookieButton.change++;
-                    CookieButton cookieButton = (CookieButton) ObjectManager.getGameObjectByName("CookieButton");
                     CookieButton.cookies = CookieButton.cookies - Level.powerCost;
-                    Level.powerCost = (Level.powerCost + (int) (Level.powerCost * 1.5f));
-                    System.out.println(Level.powerCost);
+                    Level.power++;
+                    Level.powerCost = (Level.powerCost + (int) (Level.powerCost * 2f));
+                    CookieButton.change++;
                     st.Kill();
                     st = new SpriteText("Costs " + Level.powerCost + " Cookies", 15, SpriteText.Alignment.CENTER, 7, 680, 75);
 

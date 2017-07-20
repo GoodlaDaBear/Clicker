@@ -10,7 +10,7 @@ public class THEGOODCOOKIE extends GameObject{
         super("theCookie", 50, 50, "THEGOODCOOKIE.png");
     }
 
-    SpriteText st = new SpriteText("Costs " + Level.powerCost + " Cookies", 15, SpriteText.Alignment.CENTER, 7, 680, 75);
+   SpriteText st = new SpriteText("Costs 1,000,000 Cookies", 15, SpriteText.Alignment.CENTER, 7, 840, -145);
 
     boolean debounce = true;
 
@@ -19,16 +19,14 @@ public class THEGOODCOOKIE extends GameObject{
 
 
         if(CookieButton.shop == true) {
-            if (InputManager.getMousePosition().getX() < 0 && InputManager.getMousePosition().getX() > 0 && InputManager.getMousePosition().getY() < 0 && InputManager.getMousePosition().getY() > 0) {
+            if (InputManager.getMousePosition().getX() < 260 && InputManager.getMousePosition().getX() > 217 && InputManager.getMousePosition().getY() < 355 && InputManager.getMousePosition().getY() > 313) {
                 if (InputManager.isMouseButtonPressed(0) && debounce && CookieButton.cookies >= Level.trueCookieCost && CookieButton.cookies >= 0 && Level.trueCookie < 1) {
                     debounce = false;
                     Level.trueCookie++;
-                    CookieButton.change++;
                     CookieButton.cookies = CookieButton.cookies - Level.trueCookieCost;
-                    Level.trueCookieCost = (Level.trueCookieCost + (int) (Level.trueCookieCost * 1.5f));
                     System.out.println(Level.powerCost);
-                    st.Kill();
-                    st = new SpriteText("Costs " + Level.trueCookieCost + " Cookies", 15, SpriteText.Alignment.CENTER, 7, 680, 75);
+                    Level.autoClicks = Level.autoClicks + 999999999;
+                    st = new SpriteText("You Are Now Complete GG", 15, SpriteText.Alignment.CENTER, 7, 840, -165);
 
                 }
                 if (InputManager.isMouseButtonReleased(0)) {
