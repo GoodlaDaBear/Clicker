@@ -23,8 +23,7 @@ public class CookieCloud extends GameObject {
                     debounce = false;
                     CookieButton.cookies = CookieButton.cookies - Level.cloudCost;
                     Level.cloud++;
-                    Level.autoClicks = Level.autoClicks + 100;
-                    Level.auto5Cost = (Level.cloudCost + (int) (Level.cloudCost * 1.5f));
+                    Level.cloudCost = (Level.cloudCost + (int) (Level.cloudCost * 1.5f));
                     System.out.println(Level.cloudCost);
                     st.Kill();
                     st = new SpriteText("Costs " +Level.cloudCost+ " Cookies", 15, SpriteText.Alignment.CENTER, 7, 685, -145);
