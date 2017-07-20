@@ -15,7 +15,7 @@ public class Exit_Shop extends GameObject{
         if(CookieButton.shop == true) {
             if (InputManager.getMousePosition().getX() < 75 && InputManager.getMousePosition().getX() > 25 && InputManager.getMousePosition().getY() < 560 && InputManager.getMousePosition().getY() > 510) {
                 if (InputManager.isMouseButtonTriggered(0)) {
-                    System.out.println(InputManager.getMousePosition());
+                    //System.out.println(InputManager.getMousePosition());
                     Graphics.setCameraPosition(0, Graphics.getCameraPosition().getY());
                     CookieButton CookieButton = (CookieButton) ObjectManager.getGameObjectByName("CookieButton");
                     CookieButton.bool = true;
