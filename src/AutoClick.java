@@ -14,8 +14,8 @@ public class AutoClick extends GameObject{
 
 
 
-    SpriteText st = new SpriteText("" + Level.autoCost, 15, SpriteText.Alignment.CENTER, 7, 829, 55);
-    SpriteText et = new SpriteText("" + Level.autoCost, 15, SpriteText.Alignment.CENTER, 7, 829, 55);
+    SpriteText st = new SpriteText("Costs " + Level.autoCost + " Cookies", 15, SpriteText.Alignment.CENTER, 7, 829, 55);
+    SpriteText et = new SpriteText("Costs " + Level.autoCost + " Cookies", 15, SpriteText.Alignment.CENTER, 7, 829, 75);
     @Override
     public void update(float dt){
 
@@ -30,9 +30,7 @@ public class AutoClick extends GameObject{
                     Level.autoCost = (Level.autoCost + (int) (Level.autoCost * 2f));
                     System.out.println(Level.autoCost);
                     st.Kill();
-                    st.Kill();
-                    et = new SpriteText("Costs " + Level.auto + " Cookies", 15, SpriteText.Alignment.CENTER, 7, 829, 35);
-                    st = new SpriteText("" + Level.autoCost, 15, SpriteText.Alignment.CENTER, 7, 829, 15);
+                    st = new SpriteText("Costs " + Level.autoCost + " Cookies", 15, SpriteText.Alignment.CENTER, 7, 829, 55);
 
                 }
                 if (InputManager.isMouseButtonReleased(0)) {

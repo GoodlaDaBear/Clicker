@@ -46,8 +46,6 @@ public class Level extends GameLevel {
         st = new SpriteText("Gives You One", 15, SpriteText.Alignment.CENTER, 7, 830, 115);
         st = new SpriteText("Automatic Cookie", 15, SpriteText.Alignment.CENTER, 7, 830, 95);
         st = new SpriteText("Every Second", 15, SpriteText.Alignment.CENTER, 7, 830, 75);
-        st = new SpriteText("Costs", 15, SpriteText.Alignment.CENTER, 7, 790, 55);
-        st = new SpriteText("Cookies", 15, SpriteText.Alignment.CENTER, 7, 871, 55);
         st = new SpriteText("Hand That Clicks", 15, SpriteText.Alignment.CENTER, 7, 830, 35);
         GameObject AutoClicker5 = new AutoClicker5();
         AutoClicker5.setPosition(975, 175);
