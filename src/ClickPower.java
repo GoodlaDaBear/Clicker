@@ -40,6 +40,4 @@ public class ClickPower extends GameObject                                      
             }
         }
     }
-
-
 }
