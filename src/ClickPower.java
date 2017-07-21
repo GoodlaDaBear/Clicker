@@ -26,7 +26,7 @@ public class ClickPower extends GameObject                                      
                     debounce = false;
                     CookieButton.cookies = CookieButton.cookies - Level.powerCost;
                     Level.power++;
-                    Level.powerCost = (Level.powerCost + (int) (Level.powerCost * 2f));
+                    Level.powerCost = (Level.powerCost + (int) (Level.powerCost * 1));
                     CookieButton.change++;
                     st.Kill();
                     et.Kill();
