@@ -11,6 +11,7 @@ public class AutoClicker5 extends GameObject{
     }
 
     SpriteText st = new SpriteText("Costs " + Level.auto5Cost + " Cookies", 15, SpriteText.Alignment.CENTER, 7, 975, 55);
+    SpriteText et = new SpriteText("Costs " + Level.auto5Cost + " Cookies", 15, SpriteText.Alignment.CENTER, 7, 975, 55);
 
     boolean debounce = true;
 
@@ -27,7 +28,10 @@ public class AutoClicker5 extends GameObject{
                     Level.auto5Cost = (Level.auto5Cost + (int) (Level.auto5Cost * 1.75f));
                     System.out.println(Level.auto5Cost);
                     st.Kill();
+                    et.Kill();
                     st = new SpriteText("Costs " + Level.auto5Cost + " Cookies", 15, SpriteText.Alignment.CENTER, 7, 975, 55);
+                    et = new SpriteText("You Have " , 15, SpriteText.Alignment.CENTER, 7, 975, 15);
+                    et = new SpriteText("You Have " + Level.auto5 + " X5 Auto Clickers", 15, SpriteText.Alignment.CENTER, 7, 975, -5);
                 }
                 if (InputManager.isMouseButtonReleased(0)) {
                     debounce = true;

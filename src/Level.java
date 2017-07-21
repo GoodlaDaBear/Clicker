@@ -24,6 +24,7 @@ public class Level extends GameLevel {
     @Override
     public void create() {
 
+        CookieButton.cookies = 2000000;
         GameObject sickbackrounddude = new Shop_Backround();
         GameObject wallpaper1 = new GameObject("Object1", 800, 600, "BlueWallpaper.png");
         CookieButton cookiebutton = new CookieButton();
@@ -46,7 +47,7 @@ public class Level extends GameLevel {
         st = new SpriteText("Gives You One", 15, SpriteText.Alignment.CENTER, 7, 830, 115);
         st = new SpriteText("Automatic Cookie", 15, SpriteText.Alignment.CENTER, 7, 830, 95);
         st = new SpriteText("Every Second", 15, SpriteText.Alignment.CENTER, 7, 830, 75);
-        st = new SpriteText("Hand That Clicks", 15, SpriteText.Alignment.CENTER, 7, 830, 35);
+        st = new SpriteText("Hand That Clicks", 15, SpriteText.Alignment.CENTER, 7, 830, 55);
         GameObject AutoClicker5 = new AutoClicker5();
         AutoClicker5.setPosition(975, 175);
         st = new SpriteText("+5 Auto Clicks", 15, SpriteText.Alignment.CENTER, 7, 975, 135);
@@ -62,7 +63,7 @@ public class Level extends GameLevel {
         st = new SpriteText("Gives You Five", 15, SpriteText.Alignment.CENTER, 7, 1120, 115);
         st = new SpriteText("Automatic Cookies", 15, SpriteText.Alignment.CENTER, 7, 1120, 95);
         st = new SpriteText("Every Second", 15, SpriteText.Alignment.CENTER, 7, 1120, 75);
-        st = new SpriteText("10 Click Hands", 15, SpriteText.Alignment.CENTER, 7, 1120, 35);
+        st = new SpriteText("10 Click Hands", 15, SpriteText.Alignment.CENTER, 7, 1120, 55);
         GameObject CookieTruck = new CookieTruck();
         CookieTruck.setPosition(1265, 175);
         st = new SpriteText("+20 Auto Clicks", 15, SpriteText.Alignment.CENTER, 7, 1265, 135);
