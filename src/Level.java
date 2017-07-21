@@ -4,21 +4,21 @@ import edu.digipen.level.GameLevel;
 public class Level extends GameLevel {
     SpriteText st;
     float Counter = 1.0f;
-    static int power = 0;
-    static int auto = 0;
-    static int auto5 = 0;
-    static  int drop = 0;
-    static int truck = 0;
-    static int cloud = 0;
-    static int trueCookie = 0;
-    static int powerCost = 5;
-    static int autoCost = 10;
-    static int auto5Cost = 100;
-    static  int dropCost = 500;
-    static int truckCost = 800;
-    static int cloudCost = 2500;
-    static int autoClicks = 0;
-    static int trueCookieCost = 1000000;
+    static long power = 0;
+    static long auto = 0;
+    static long auto5 = 0;
+    static  long drop = 0;
+    static long truck = 0;
+    static long cloud = 0;
+    static long trueCookie = 0;
+    static long powerCost = 5;
+    static long autoCost = 10;
+    static long auto5Cost = 100;
+    static  long dropCost = 500;
+    static long truckCost = 800;
+    static long cloudCost = 2500;
+    static long autoClicks = 0;
+    static long trueCookieCost = 1000000;
 
 
     @Override
