@@ -10,6 +10,7 @@ public class CookieButton extends GameObject {
     static long cookies = 0;
     static int change = 1;
     long count = 0;
+    static int multi = 1;
 
     SpriteText st;
     Boolean bool = true;
@@ -28,7 +29,7 @@ public class CookieButton extends GameObject {
             if (InputManager.getMousePosition().getX() < 460 && InputManager.getMousePosition().getX() > 315 && InputManager.getMousePosition().getY() < 315 && InputManager.getMousePosition().getY() > 265) {
                 if (InputManager.isMouseButtonTriggered(0)) {
 
-                    cookies = cookies + change;
+                    cookies = cookies + (change * multi);
                     st.Change("Cookies: " + cookies);
                     animationData.goToAndStop(0);
                     GameObject cookie = new Cookie(count);

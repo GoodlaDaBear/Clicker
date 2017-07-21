@@ -6,7 +6,7 @@ import edu.digipen.InputManager;
 import edu.digipen.gameobject.GameObject;
 
 public class bettertap extends GameObject {
-    SpriteText st;
+        SpriteText st;
     float powerupcounter2 = 1;
     boolean powerup2 = false;
     float texttimer2 = 2;
@@ -40,7 +40,7 @@ public class bettertap extends GameObject {
         }
         if(powerupaffect <=0){
             powerup2=false;
-            CookieButton.change = oldChange;
+            CookieButton.multi = 1;
             powerupaffect = 7;
         }
         else
@@ -56,8 +56,7 @@ public class bettertap extends GameObject {
                     //System.out.println(InputManager.getMousePosition());
                     if (InputManager.getMousePosition().getX() < 154.0 && InputManager.getMousePosition().getX() > 52.0 && InputManager.getMousePosition().getY() < 156.0 && InputManager.getMousePosition().getY() > 53.0) {
                         st = new SpriteText("YOU GET 5 TIMES THE CLICK POWER FOR 7 SECONDS", 15, SpriteText.Alignment.CENTER, 7, -200, 200);
-                        oldChange = CookieButton.change;
-                        CookieButton.change = CookieButton.change * 5;
+                        CookieButton.multi = 5;
                         // make the current tap times 5.
                         isTextShowing = true;
                         texttimer2 = 2;
