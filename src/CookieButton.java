@@ -39,7 +39,7 @@ public class CookieButton extends GameObject {
                 }
             }
             if (InputManager.isTriggered(KeyEvent.VK_SPACE)) {
-                cookies = cookies + change;
+                cookies = cookies + (change* multi);
                 st.Change("Cookies: " + cookies);
                 animationData.goToFrame(0);
                 GameObject cookie = new Cookie(count);
