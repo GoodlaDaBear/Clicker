@@ -3,7 +3,6 @@
  */
 import edu.digipen.InputManager;
 import edu.digipen.gameobject.GameObject;
-import edu.digipen.gameobject.ObjectManager;
 public class Powerupmoretap extends GameObject {
     boolean isTextShowing = false;
     float texttimer3 = 2;
@@ -35,7 +34,7 @@ public class Powerupmoretap extends GameObject {
         if(powerup3==true)
             if (getOpacity() > 0) {
                 if (InputManager.isMouseButtonReleased(0)) {
-                    System.out.println(InputManager.getMousePosition());
+                    //System.out.println(InputManager.getMousePosition());
                     if (InputManager.getMousePosition().getX() < 228.0 && InputManager.getMousePosition().getX() > 16.0 && InputManager.getMousePosition().getY() < 583.0 && InputManager.getMousePosition().getY() > 390.0) {
                         st = new SpriteText("YOU GET ONE MORE TAP POWER", 15, SpriteText.Alignment.CENTER, 7, -280, -175);
                         CookieButton.change++;
