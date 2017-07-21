@@ -24,6 +24,7 @@ public class Level extends GameLevel {
     @Override
     public void create() {
 
+
         GameObject sickbackrounddude = new Shop_Backround();
         GameObject wallpaper1 = new GameObject("Object1", 800, 600, "BlueWallpaper.png");
         CookieButton cookiebutton = new CookieButton();
@@ -76,7 +77,7 @@ public class Level extends GameLevel {
         st = new SpriteText("Gives You 20", 15, SpriteText.Alignment.CENTER, 7, 685, -85);
         st = new SpriteText("Automatic Cookies", 15, SpriteText.Alignment.CENTER, 7, 685, -105);
         st = new SpriteText("Every Second", 15, SpriteText.Alignment.CENTER, 7, 685, -125);
-        st = new SpriteText("Cookie Clouds", 15, SpriteText.Alignment.CENTER, 7, 685, -165);
+        st = new SpriteText("Cookie Clouds", 15, SpriteText.Alignment.CENTER, 7, 685, -145);
         GameObject THEGOODCOOKIE = new THEGOODCOOKIE();
         THEGOODCOOKIE.setPosition(840, -25);
         st = new SpriteText("This Is The One", 15, SpriteText.Alignment.CENTER, 7, 840, -65);
