@@ -53,35 +53,22 @@ public class bettertap extends GameObject {
 
         //System.out.println(powerup2);
         if(powerup2==true)
-            if (InputManager.isTriggered(KeyEvent.VK_SPACE))
-            {
-                if (InputManager.getMousePosition().getX() < 154.0 && InputManager.getMousePosition().getX() > 52.0 && InputManager.getMousePosition().getY() < 146.0 && InputManager.getMousePosition().getY() > 56.0) {
-                    st = new SpriteText("YOU GET 5 TIMES THE CLICK POWER FOR 7 SECONDS", 15, SpriteText.Alignment.CENTER, 7, -200, 200);
-                    CookieButton.multi = 5;
-                    // make the current tap times 5.
-                    isTextShowing = true;
-                    texttimer2 = 2;
-                    boxcounter2 = 0 ;
-                    powerupcounter2 = 60;
-                    powerupaffect = 7;
-                }
-            }
-                if (getOpacity() > 0) {
+            if (getOpacity() > 0) {
                 if (InputManager.isMouseButtonReleased(0)) {
-                   // System.out.println(InputManager.getMousePosition());
+                    System.out.println(InputManager.getMousePosition());
                     if (InputManager.getMousePosition().getX() < 154.0 && InputManager.getMousePosition().getX() > 52.0 && InputManager.getMousePosition().getY() < 146.0 && InputManager.getMousePosition().getY() > 56.0) {
                         st = new SpriteText("YOU GET 5 TIMES THE CLICK POWER FOR 7 SECONDS", 15, SpriteText.Alignment.CENTER, 7, -200, 200);
                         CookieButton.multi = 5;
                         // make the current tap times 5.
                         isTextShowing = true;
                         texttimer2 = 2;
-                        boxcounter2 = 0 ;
+                        boxcounter2 = 0;
                         powerupcounter2 = 60;
                         powerupaffect = 7;
                     }
                 }
             }
+        }
 
 
-}
     }
