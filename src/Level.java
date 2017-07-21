@@ -70,7 +70,7 @@ public class Level extends GameLevel {
         st = new SpriteText("Gives You 20", 15, SpriteText.Alignment.CENTER, 7, 1265, 115);
         st = new SpriteText("Automatic Cookies", 15, SpriteText.Alignment.CENTER, 7, 1265, 95);
         st = new SpriteText("Every Second", 15, SpriteText.Alignment.CENTER, 7, 1265, 75);
-        st = new SpriteText("Cookie Trucks", 15, SpriteText.Alignment.CENTER, 7, 1265, 35);
+        st = new SpriteText("Cookie Trucks", 15, SpriteText.Alignment.CENTER, 7, 1265, 55);
         GameObject CookieCloud = new CookieCloud();
         CookieCloud.setPosition(685, -25);
         st = new SpriteText("+100 Auto Clicks", 15, SpriteText.Alignment.CENTER, 7, 685, -65);

@@ -12,7 +12,8 @@ public class CookieTruck extends GameObject {
 
     boolean debounce = true;
 
-    SpriteText  st = new SpriteText("Costs " + Level.truckCost +  " Cookies", 15, SpriteText.Alignment.CENTER, 7, 1265, 55);
+    SpriteText  st = new SpriteText("Costs " + Level.truckCost +  " Cookies", 15, SpriteText.Alignment.CENTER, 7, 1265, 35);
+    SpriteText  et = new SpriteText("Costs " + Level.truckCost +  " Cookies", 15, SpriteText.Alignment.CENTER, 7, 1265, 35);
 
     @Override
     public void update(float dt) {
@@ -27,7 +28,9 @@ public class CookieTruck extends GameObject {
                     System.out.println(Level.truckCost);
                     Level.autoClicks = Level.autoClicks + 20;
                     st.Kill();
-                    st = new SpriteText("Costs " + Level.truckCost +  " Cookies", 15, SpriteText.Alignment.CENTER, 7, 1265, 55);
+                    et.Kill();
+                    st = new SpriteText("Costs " + Level.truckCost +  " Cookies", 15, SpriteText.Alignment.CENTER, 7, 1265, 35);
+                    et = new SpriteText("You Have " + Level.truck +  " Trucks", 15, SpriteText.Alignment.CENTER, 7, 1265, 15);
 
                 }
                 if (InputManager.isMouseButtonReleased(0)) {

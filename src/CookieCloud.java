@@ -14,6 +14,7 @@ public class CookieCloud extends GameObject {
     boolean debounce = true;
 
     SpriteText  st = new SpriteText("Costs " +Level.cloudCost+ " Cookies", 15, SpriteText.Alignment.CENTER, 7, 685, -145);
+    SpriteText  et = new SpriteText("Costs " +Level.cloudCost+ " Cookies", 15, SpriteText.Alignment.CENTER, 7, 685, -145);
     @Override
     public void update(float dt) {
 
@@ -27,7 +28,9 @@ public class CookieCloud extends GameObject {
                     Level.cloudCost = (Level.cloudCost + (int) (Level.cloudCost * 1.5f));
                     System.out.println(Level.cloudCost);
                     st.Kill();
+                    et.Kill();
                     st = new SpriteText("Costs " +Level.cloudCost+ " Cookies", 15, SpriteText.Alignment.CENTER, 7, 685, -145);
+                    et = new SpriteText("You Have " +Level.cloud+ " Clouds", 15, SpriteText.Alignment.CENTER, 7, 685, -165);
 
                 }
                 if (InputManager.isMouseButtonReleased(0)) {
